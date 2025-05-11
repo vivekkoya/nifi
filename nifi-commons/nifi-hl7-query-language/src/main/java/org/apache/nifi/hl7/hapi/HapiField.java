@@ -50,8 +50,8 @@ public class HapiField implements HL7Field, HL7Component {
         final ExtraComponents extra = type.getExtraComponents();
         if (extra != null && extra.numComponents() > 0) {
             final String singleFieldValue;
-            if (type instanceof Primitive) {
-                singleFieldValue = ((Primitive) type).getValue();
+            if (type instanceof Primitive t) {
+                singleFieldValue = t.getValue();
             } else {
                 singleFieldValue = this.value;
             }
